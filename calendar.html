@@ -1,0 +1,186 @@
+<!Calendar>
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset='utf-8' />
+    <link href='../fullcalendar.css' rel='stylesheet' />
+    <link href='../fullcalendar.print.css' rel='stylesheet' media='print' />
+    <script src='../lib/moment.min.js'></script>
+    <script src='../lib/jquery.min.js'></script>
+    <script src='../fullcalendar.min.js'></script>
+    <script>
+        
+        $(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+
+	$(document).ready(function() {
+
+		$('#calendar').fullCalendar({
+			defaultDate: '2015-04-1',
+			editable: true,
+			eventLimit: true, // allow "more" link when too many events
+			events: [
+				//{
+				//	title: '4th Grade OLL',
+				//	start: '2015-04-21T15:15:00',
+				//},
+                {
+					title: '4th Grade OLL',
+					start: '2015-04-21',
+				},
+                {
+                    title: '4th Grade OLL',
+					start: '2015-05-05'
+				},
+                {
+                    title: '4th Grade Joes',
+					start: '2015-04-02'
+				},
+                {
+                    title: '4th Grade Joes',
+					start: '2015-04-16'
+				},
+                {
+                    title: '4th Grade Joes',
+					start: '2015-04-23'
+				},
+                {
+                    title: '4th Grade Joes',
+					start: '2015-04-30'
+				},
+                {
+                    title: '5th Grade Joes',
+					start: '2015-04-03'
+				},
+                {
+                    title: '5th Grade Joes',
+					start: '2015-04-17'
+				},
+                {
+                    title: '5th Grade Joes',
+					start: '2015-04-24'
+                },
+                {
+                    title: '5th Grade Joes',
+					start: '2015-05-01'
+				},
+                {
+                    title: '4th Grade Annes',
+					start: '2015-03-23'
+				},
+                {
+                    title: 'St. Annes',
+					start: '2015-03-30'
+				},
+                {
+                    title: 'St. Annes',
+					start: '2015-04-20'
+				},
+                {
+                    title: 'St. Annes',
+					start: '2015-04-13'
+				},
+                {
+                    title: 'St. Annes',
+					start: '2015-05-11'
+				},
+                {
+                    title: '5th Grade OLL',
+					start: '2015-04-20'
+				},
+                {
+                    title: '5th Grade OLL',
+					start: '2015-04-27'
+				},
+                {
+                    title: '5th Grade OLL',
+					start: '2015-05-04'
+				}
+                
+			]
+		});
+		
+	});
+
+    </script>
+    <style>
+        
+        #calendar {
+            max-width: 1500px;
+            width: 800px;
+            height:800px;
+            margin: 0 auto;
+            top: 130px;
+            left: 200px;
+            position:absolute;
+            z-index: 0;
+        }
+        
+        #upcomingevents
+        {
+            left: 1050px;
+            top: 130px;
+            width: 320px;
+            height: 300px;
+            background-color: #CCFFFF;
+            padding: 10px;
+            line-height: 2;
+            font size: 10;
+            position:absolute;
+            border-style: double;
+            border-width: 3px;
+        }
+        
+        a { text-decoration: none }
+    </style>
+</head>
+    
+<body>
+    
+    <div id="header">
+        <img src="Logo.JPG" alt=“Logo” width="90px" height="90px" align="left">
+        <h1>Women Advancing Tomorrow's Technologists</h1>
+    </div>
+    
+    <div id="nav" style="height:120%">
+        <a href="homepage.html">Home</a><br>
+        <a href="whoweare.html">Who We Are</a><br>
+        <a href="calendar.html">Calendar</a><br>
+        <a href="club.html">Club</a><br>
+        <a href="resources.html">Resources</a><br>
+    </div>
+    
+    <div id="footer">
+  	     WATT Coding
+    </div> 
+    
+    <div id="calendar"></div>
+    
+    <div id="upcomingevents"> 
+        <p>
+            Upcoming Events <br>
+            <ul>
+                <li>April 20th: Fifth Grade Girls Session</li>
+                <li>April 21st: Fourth Grade Girls Session</li>
+                <li>May 5th: FOurth Grade Girls Sessoin</li>
+            </ul>
+        </p>
+    </div>
+    
+</body>
+    
+</html>
